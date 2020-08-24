@@ -3,12 +3,18 @@ import React, {Component} from 'react'
 
 // Child Component (Table)
 class Table extends Component {
-    // Load the Child Component (Table) inside render() of the Pare
+    // Load the Child Components (TableHeader & TableBody) inside render() of the Table Component (Parent of the Two)
     render() {
+        // Need to access the Prop named employeeData that was passed from the Parent (App) to the Child (Table) by using 'this.props'
+        const {employeeData} = this.props
+        
         return (
+            // Two Child Components Nested inside of Table
+            // Both Must be wrapped inside of a Parent Element (<table>) because Class Components can only return ONE Element
+                // Pass in the above data variable into the Child Component that it best belongs to (TableBody)
             <table>
                 <TableHeader />
-                <TableBody />
+                <TableBody employeeData={employeeData} />
             </table>
         )
     }
@@ -29,27 +35,22 @@ const TableHeader = () => {
 
 // Child Component (TableBody) of the Table Component written as a Simple Component
     // This will be the Body of the Employee Table
-const TableBody = () => {
-    return (
-        <tbody>
-            <tr>
-                <td>Fredward</td>
-                <td>Manager</td>
+    // Pass the props (employee data) through the Component as a parameter
+const TableBody = (props) => {
+    // Map through the employee data array from Parent (App) to return a table row for each object in the array
+    const rows = props.employeeData.map((row, index) => {
+        // Each table row needs a key for React to Identify them
+        // Identifies each object in the employees data array from Parent (App) to map
+        return (
+            <tr key={index}>
+                <td>{row.name}</td>
+                <td>{row.title}</td>
             </tr>
-            <tr>
-                <td>DJ</td>
-                <td>Full Stack Engineer</td>
-            </tr>
-            <tr>
-                <td>Crosby</td>
-                <td>Systems Admin</td>
-            </tr>
-            <tr>
-                <td>Mina</td>
-                <td>Accountant</td>
-            </tr>
-        </tbody>
-    )
+        )
+    })
+
+    // Maps, changes, and displays each object in the employee data array from Parent (App)
+    return <tbody>{rows}</tbody>
 }
 
 // Export Child Component (Table) and load it in Parent Component (App)

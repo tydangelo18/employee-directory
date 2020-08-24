@@ -11,9 +11,31 @@ import Table from './Table'
       // Load the Child Component (Table) inside render() of the Parent Component (App)
       // Be sure it is inside a container
     render() {
+        // Placeholder Table Data to Test Props
+            // Will pass the data through to the Child Component (Table) with props
+        const employees = [
+            {
+                name: 'Jack',
+                title: 'Manager',
+            },
+            {
+                name: 'DJ',
+                title: 'Full Stack Engineer'
+            },
+            {
+                name: 'Crosby',
+                title: 'Systems Admin',
+            },
+            {
+                name: 'Mina',
+                title: 'Accountant',
+            },
+        ]
+
       return (
+          // Prop named employeeData is the above employees Array that will be passed through to the Child Component (Table)
         <div className="container">
-            <Table />
+            <Table employeeData={employees} />
         </div>
       )
     }

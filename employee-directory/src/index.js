@@ -1,17 +1,9 @@
-import React from 'react';
+// Importing React, ReactDOM, and CSS for the page
+import React from 'react'
 import ReactDOM from 'react-dom';
+import App from './App'
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// Rendering the App component to the root so that the root <div> element in Index.html will be updated when a React Element Changes
+ReactDOM.render(<App />, document.getElementById('root'))
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();

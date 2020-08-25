@@ -1,10 +1,10 @@
 // Loading the {Component} as a property of React, so no longer need to extend React.Component
-import React from 'react'
+import React from 'react';
 
 // Child Component (Table)
 const Table = (props) => {
     // can declare a variable equal to props and have the Child receive the prop as the variable rather than as props.x
-    const {employeeData, removeEmployee} = props
+    const { employeeData, removeEmployee } = props;
     
     // Load the Child Components (TableHeader & TableBody) inside render() of the Table Component (Parent of the Two)
     return (
@@ -15,7 +15,7 @@ const Table = (props) => {
             <TableHeader />
             <TableBody employeeData={employeeData} removeEmployee={removeEmployee} />
         </table>
-    )
+    );
 }
 
 
@@ -29,7 +29,7 @@ const TableHeader = () => {
                 <th>Position</th>
             </tr>
         </thead>
-    )
+    );
 }
 
 // Child Component (TableBody) of the Table Component written as a Simple Component
@@ -46,7 +46,7 @@ const TableBody = (props) => {
         return (
             <tr key={index}>
                 <td>{row.name}</td>
-                <td>{row.title}</td>
+                <td>{row.position}</td>
                 <td>
                     <button onClick={() => props.removeEmployee(index)}>Delete</button>
                 </td>
@@ -59,4 +59,4 @@ const TableBody = (props) => {
 }
 
 // Export Child Component (Table) and load it in Parent Component (App)
-export default Table
+export default Table;

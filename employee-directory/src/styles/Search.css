@@ -9,7 +9,17 @@
 }
 
 .searchBar {
-    margin: 40px;
+    opacity: 0;
+    margin: 30px;
     display: flex;
     justify-content: center;
+    animation-name: search;
+    animation-duration: 1.75s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes search {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }

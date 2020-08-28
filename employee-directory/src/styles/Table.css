@@ -5,6 +5,7 @@
 }
 
 .content-table {
+    opacity: 0;
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 0.9em;
@@ -12,5 +13,13 @@
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    animation-name: table;
+    animation-duration: 3s;
+    animation-delay: 2.75s;
+    animation-fill-mode: forwards;
+}
 
+@keyframes table {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }

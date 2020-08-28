@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import SearchBox from './components/Search';
 import Table from './components/Table';
+import Header from './components/Header';
 
 
 // Parent Component
@@ -161,7 +162,7 @@ class App extends Component {
 
       return (
         <div className="container">
-          <h1>Employee Directory</h1>
+          <Header />
           <SearchBox handleInput={this.handleInput}/>
           <Table employeeData={employees} removeEmployee={this.removeEmployee} filteredEmployees={filteredEmployees} />
         </div>

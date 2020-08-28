@@ -1,0 +1,35 @@
+.headerDiv {
+display: flex;
+flex-flow: column;
+align-items: center;
+}
+
+.headerTitle {
+    opacity: 0;
+    position: relative;
+    animation-name: title;
+    animation-duration: 1.25s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes title {
+    0% {top: -120px;}
+    100% {opacity: 1; top: 10px;}
+}
+
+.headerSub {
+    opacity: 0;
+    position: relative;
+    animation-name: sub;
+    animation-duration: 1.25s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sub {
+    0% {opacity: 0; top: -150px;}
+    100% {opacity: 1; top: 5px;}
+}
+
+

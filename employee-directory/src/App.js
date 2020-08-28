@@ -156,7 +156,7 @@ class App extends Component {
       
       // contains all employees to filter for based off what the user types into search
       const filteredEmployees = this.state.employees.filter((employee) => {
-        return employee.name.toLowerCase().includes(this.state.searchEmployee.toLowerCase())
+        return employee.department.toLowerCase().includes(this.state.searchEmployee.toLowerCase())
       })
 
       return (

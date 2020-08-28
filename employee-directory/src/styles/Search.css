@@ -5,8 +5,11 @@
     height: 25px;
     font-weight: bold;
     font-size: large;
+    
 }
 
 .searchBar {
     margin: 40px;
+    display: flex;
+    justify-content: center;
 }

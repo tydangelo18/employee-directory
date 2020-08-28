@@ -1,0 +1,28 @@
+.table-body td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd
+
+}
+
+.table-body:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table-body:last-of-type {
+    border-bottom: 2px solid #090909;
+}
+
+.table-body td.active-row {
+    font-weight: bold;
+    color: #000000
+    
+}
+
+.table-body button {
+    background-color: rgb(21, 126, 255);
+    border-radius: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    height: 22px;
+}

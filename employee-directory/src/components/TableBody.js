@@ -1,13 +1,14 @@
 // React import
 import React from "react";
+import '../styles/TableBody.css'
 
 const TableBody = (props) => {
     // Map through the filtered employees function and assign a key for React to identify 
     const rows = props.filteredEmployees.map((row, index) => {
         
         return (
-            <tr key={index}>
-                <td>{row.name}</td>
+            <tr className="table-body" key={index}>
+                <td className="active-row">{row.name}</td>
                 <td>{row.position}</td>
                 <td>{row.department}</td>
                 <td>{row.salary}</td>

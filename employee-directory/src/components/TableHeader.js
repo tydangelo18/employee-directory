@@ -4,12 +4,13 @@ import "../styles/TableHeader.css"
 
 const TableHeader = () => {
     return (
-        <thead>
+        <thead className="header">
             <tr>
                 <th>Employee</th>
                 <th>Position</th>
                 <th>Department</th>
                 <th>Salary</th>
+                <th>Delete</th>
             </tr>
         </thead>
     );

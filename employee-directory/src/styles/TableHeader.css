@@ -1,0 +1,10 @@
+.header tr {
+    background-color: rgb(21, 126, 255);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.header th {
+    padding: 12px 15px;
+}

@@ -1,10 +1,11 @@
 // React and Component Imports
 import React from 'react';
+import "../styles/Search.css";
 
 function Search(props) {
     return (
-        <div>
-    <input onChange={props.handleInput} type="text"/>
+        <div className="searchBar">
+            <input onChange={props.handleInput} type="text"/>
         </div>
     )
 }

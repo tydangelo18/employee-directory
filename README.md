@@ -7,12 +7,16 @@
 
 - [Ty D'Angelo](https://github.com/tydangelo18)
 
+### Demo
+
+- 
+
 ### Technologies Used
 
 1. React.js
 2. CSS Keyframes
-3. Buildpack
-4. Heroku
+3. Node.js
+4. Github Pages
 
 ### Future Development
  - Can filter by any category within the table
